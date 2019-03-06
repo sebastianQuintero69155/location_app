@@ -24,9 +24,11 @@ class LoginsController < ApplicationController
   # POST /logins
   # POST /logins.json
   def create
+    
     @login = Login.new(login_params)
       if @login.save
           flash[:success] = "User was succefully created"
+          redirect_to logins_path
       else
           render 'new'
       end
@@ -60,6 +62,6 @@ class LoginsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def login_params
-      params.require(:login).permit(:email, :username)
+      params.require(:login).permit(:email, :password,:username)
     end
 end
