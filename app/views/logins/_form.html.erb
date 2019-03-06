@@ -1,32 +1,12 @@
 <div class= 'row'>
   <div class = 'col-sm-12'>
     <%= form_with(model: login, local: true) do |form| %>
-      <% if login.errors.any? %>
-        <div class='row'>
-          <div class="col-xs-4 col-xs-offset-4">
-            <div class="panel panel-danger">
-              <div class="panel-heading">
-                <h2 class="panel-title">
-                  <%= pluralize(login.errors.count, "error") %>
-                  prohibited this login from being saved:
-                </h2>
-                <div class="panel-body">
-                  <ul>
-                    <% login.errors.full_messages.each do |message| %>
-                      <li><%= message %></li>
-                    <% end %>
-                  </ul> 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
+      <%= render 'shared/errors', obj: login%>
       <div class="form-group row col-sm-offset-4">
           <div class = "control-label col-sm-1">            
             <%= form.label :email %>
           </div>
-          <div class="col-sm-4">
+          <div class="col-sm-5">
             <%= form.text_field :email, class:"form-control", placeholder: "example@example.com", autofocus:true %>
             </div>
       </div>
@@ -34,7 +14,7 @@
         <div class = "control-label col-sm-1">            
           <%= form.label :password %>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-5">
           <%= form.text_field :password, class:"form-control", placeholder: "password", autofocus:true %>
           </div>
       </div>
@@ -43,7 +23,7 @@
         <div class = "control-label col-sm-1">            
           <%= form.label :username %>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-5">
           <%= form.text_field :username, class:"form-control", placeholder: "username", autofocus:true %>
           </div>
       </div>

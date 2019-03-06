@@ -25,17 +25,13 @@ class LoginsController < ApplicationController
   # POST /logins.json
   def create
     @login = Login.new(login_params)
-
-    respond_to do |format|
       if @login.save
-        format.html { redirect_to @login, notice: 'Login was successfully created.' }
-        format.json { render :show, status: :created, location: @login }
+          flash[:success] = "User was succefully created"
       else
-        format.html { render :new }
-        format.json { render json: @login.errors, status: :unprocessable_entity }
+          render 'new'
       end
-    end
   end
+  
 
   # PATCH/PUT /logins/1
   # PATCH/PUT /logins/1.json
