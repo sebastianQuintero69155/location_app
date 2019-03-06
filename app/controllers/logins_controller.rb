@@ -69,6 +69,6 @@ class LoginsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def login_params
-      params.require(:login).permit(:email, :password, :username)
+      params.require(:login).permit(:email, :username)
     end
 end

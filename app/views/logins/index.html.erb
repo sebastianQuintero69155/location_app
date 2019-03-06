@@ -16,7 +16,6 @@
     <% @logins.each do |login| %>
       <tr>
         <td><%= login.email %></td>
-        <td><%= login.password %></td>
         <td><%= login.username %></td>
         <td><%= link_to 'Show', login %></td>
         <td><%= link_to 'Edit', edit_login_path(login) %></td>
