@@ -36,25 +36,20 @@ class LoginsController < ApplicationController
   # PATCH/PUT /logins/1
   # PATCH/PUT /logins/1.json
   def update
-    respond_to do |format|
       if @login.update(login_params)
-        format.html { redirect_to @login, notice: 'Login was successfully updated.' }
-        format.json { render :show, status: :ok, location: @login }
-      else
-        format.html { render :edit }
-        format.json { render json: @login.errors, status: :unprocessable_entity }
-      end
-    end
+        flash[:success] = "User was successfully updatabe"
+        redirect_to @login
+        else
+            render 'edit'
+        end
   end
 
   # DELETE /logins/1
   # DELETE /logins/1.json
   def destroy
     @login.destroy
-    respond_to do |format|
-      format.html { redirect_to logins_url, notice: 'Login was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    flash[:danger] = "User was successfully deleted"
+    redirect_to root_path
   end
 
   private
