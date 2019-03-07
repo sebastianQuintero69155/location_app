@@ -17,6 +17,16 @@ $navbar-default-bg: black;
     text-decoration: none;
 }
 
+.navbar .navbar-nav li a {
+    color: white !important;
+}
+
+.navbar .navbar-nav li a:hover {
+    color: white !important;
+    background-color: gray;
+    opacity: 0,5;
+}
+
 .jumbotron {
     background-image: asset-url('maps.png');
     background-size: cover;
@@ -41,3 +51,9 @@ footer{
     border-top: 1px solid white;
     color: #777777;
 }
+
+footer a:hover{
+    color: #5681c0;
+}
+
+
