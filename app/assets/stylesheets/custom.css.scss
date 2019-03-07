@@ -16,3 +16,21 @@ $navbar-default-bg: black;
     color: blue;
     text-decoration: none;
 }
+
+.jumbotron {
+    background-image: asset-url('maps.png');
+    background-size: cover;
+    height:550px;
+}
+
+.jumbotron h1 {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.btn-xlarge {
+    font-size: 1.7em;
+    background-color: black;
+}
