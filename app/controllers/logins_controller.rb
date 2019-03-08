@@ -38,12 +38,16 @@ class LoginsController < ApplicationController
   # PATCH/PUT /logins/1
   # PATCH/PUT /logins/1.json
   def update
+    if @login != current_login
       if @login.update(login_params)
         flash[:success] = "User was successfully updatabe"
         redirect_to @login
         else
             render 'edit'
         end
+    else
+      flash.now[:danger] = "prueba de error gono"
+    end
   end
 
   # DELETE /logins/1
