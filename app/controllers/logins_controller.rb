@@ -28,7 +28,7 @@ class LoginsController < ApplicationController
     @login = Login.new(login_params)
       if @login.save
           flash[:success] = "User was succefully created"
-          redirect_to new_login_path
+          redirect_to acces_path
       else
           render 'new'
       end

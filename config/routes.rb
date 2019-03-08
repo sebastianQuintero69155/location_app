@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'acces', to: 'sessions#new'
   post 'acces', to: 'sessions#create'
   delete 'acces', to: 'sessions#destroy'
+  get 'maps', to: 'pages#maps'
 end

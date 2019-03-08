@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
         if login && login.authenticate(params[:session][:password])
             session[:login_id] = login.id
             flash[:success] = "you have successfully loggen in"
-            redirect_to login_path(login)
+            redirect_to maps_path(login)
 
         else
             flash.now[:danger] = "There was something wrong whit your login information"
