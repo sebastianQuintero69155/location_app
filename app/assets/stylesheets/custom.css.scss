@@ -1,4 +1,4 @@
-$navbar-default-bg: black;
+$navbar-default-bg: rgb(4, 73, 41);
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -13,7 +13,7 @@ $navbar-default-bg: black;
 }
 
 #logo:hover {
-    color: blue;
+    color: greenyellow;
     text-decoration: none;
 }
 
@@ -95,6 +95,9 @@ footer a:hover{
 
 .sign-link a {
     color: #64103F; 
+}
+.navbar-brand{
+    color: white;
 }
 
   
