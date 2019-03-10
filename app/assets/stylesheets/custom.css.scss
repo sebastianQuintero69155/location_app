@@ -36,19 +36,6 @@ $navbar-default-bg: rgb(4, 73, 41);
     padding-top: 5px;
 }
 
-.jumbotron h1 {
-    color: black;
-    text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: -1px;
-    font-weight: bold;
-    margin-top: 45px;
-    padding-top: 5px;
-}
-.btn-xlarge {
-    font-size: 1.7em;
-    background-color: rgba(0, 0, 0, 0.432);
-}
 
 footer{
     margin-top: 25px;
@@ -101,3 +88,65 @@ footer a:hover{
 }
 
   
+
+.login-form {
+    width: 385px;
+    margin: 10px auto;
+    padding: 30px;
+   
+}
+.login-form form {        
+    width: 385px;
+    margin-bottom: 150px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    background-image: asset-url('maps2.jpg');
+    background-size: cover;
+    opacity: 0,5;
+}
+
+.social-btn .btn:hover {
+    opacity: 0.9;
+}
+
+.login-form h2 {
+    margin: 0 0 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+#sign-in-email{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.699);
+ 
+}
+
+#sign-in-pass{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.699);
+}
+
+#sign-in-remember{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+
+.row form {        
+    width: 900px;
+    margin-bottom: 150px;
+    padding: 30px;
+}
+
+.row h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
