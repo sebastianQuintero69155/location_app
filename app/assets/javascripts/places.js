@@ -14,8 +14,16 @@ function initMap(lat, lng) {
     });
 }
 function initMap2() {
+
     var lat = document.getElementById('place_latitude').value;
     var lng = document.getElementById('place_longitude').value;
+    // if not defined create default position
+    if (!lat || !lng){
+    lat=5.077018;
+    lng=-75.518865;
+    document.getElementById('place_latitude').value = lat;
+    document.getElementById('place_longitude').value = lng;
+}
     
     var myCoords = new google.maps.LatLng(lat, lng);
     var mapOptions = {
