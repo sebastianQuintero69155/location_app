@@ -6,6 +6,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise', '~>4.5.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
+#location ip direction
+gem 'rack-ip-authorizer'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -49,6 +51,8 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  
+
 end
 
 group :development do
