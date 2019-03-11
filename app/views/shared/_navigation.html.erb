@@ -9,19 +9,22 @@
       </button>
       <%= link_to "Location", root_path, class:"navbar-brand" , id:"logo" %>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "List Places", places_path %></li>
+        <li><%= link_to "New Place", new_place_path %></li>
+      </ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-      <p class="navbar-text">
-        Signed in as <%= "#{current_user.email}" %> 
-      </p>
-      <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-    <% else %>
-      <li><%= link_to "Sign up", new_user_registration_path %></li> 
-      <li><%= link_to "Sign in", new_user_session_path %></li>
-    <% end %>
+        <p class="navbar-text">
+          Signed in as <%= "#{current_user.email}" %> 
+        </p>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path %></li> 
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+      <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
