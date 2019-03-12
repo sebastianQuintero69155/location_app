@@ -1,50 +1,61 @@
-<% provide :head_tags do %>
-  <meta name='turbolinks-visit-control' content='reload'>
-  <script>
-      document.addEventListener("DOMContentLoaded", initMap2);
-  </script>
-<% end %>
+<div class= 'row'>
+  <div class = 'col-sm-12'>
+    <% provide :head_tags do %>
+      <meta name='turbolinks-visit-control' content='reload'>
+      <script>
+          document.addEventListener("DOMContentLoaded", initMap2);
+      </script>
+    <% end %>
 
-<%= form_with(model: place, local: true) do |form| %>
+    <%= form_with(model: place, local: true) do |form| %>
 
-  
-  <% if place.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
+      
+      <% if place.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(place.errors.count, "error") %> prohibited this place from being saved:</h2>
 
-      <ul>
-      <% place.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% place.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
+      <div class="form-group row">
+        <div class = "control-label col-sm-1"> 
+          <%= form.label :name%>
+        </div>
+        <div class="col-sm-3">
+          <%= form.text_field :name, class:"form-control", placeholder: "Name", autofocus:true  %>
+        </div>
+        <div class = "control-label col-sm-1"> 
+          <%= form.label :latitude %>
+        </div>
+        <div class="col-sm-3">
+        <%= form.text_field :latitude, class:"form-control" %>
+        </div>
+        <div class="control-label col-sm-1">
+          <%= form.label :longitude %>
+        </div>
+        <div class="col-sm-3">
+          <%= form.text_field :longitude, class:"form-control" %>
+        </div>
+        
+      
     </div>
-  <% end %>
+    <div class = "col-sm-10 offset-sm-5">
+        <%= form.submit(@place.new_record? ? "Create" : "Update Place", class:"btn btn-primary btn-lg") %>
+        </div>
+     <div>
 
+      <p>
+      <div id="map2"></div>
+      </p>
+      </div>
+      
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :latitude %>
-    <%= form.text_field :latitude %>
-  </div>
-
-  <div class="field">
-    <%= form.label :longitude %>
-    <%= form.text_field :longitude %>
-  </div>
-  <div>
-  <p>
-  <div id="map2"></div>
-  </p>
-  </div>
-  
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
- 
-<% end %>
-
+     
+    
+    <% end %>
+</div>
+</div>
