@@ -27,7 +27,7 @@ class PlacesController < ApplicationController
   def create
     @place = Place.new(place_params)
       if @place.save
-        flash[:success] = "Place was successfully created."
+        flash[:notice] = "Place was successfully created."
         redirect_to places_path
     else
         render 'new'
@@ -38,7 +38,7 @@ class PlacesController < ApplicationController
   # PATCH/PUT /places/1.json
   def update
     if @place.update(place_params)
-      flash[:success] = "Place was successfully updatabe"
+      flash[:notice] = "Place was successfully updatabe"
       redirect_to @place
     else
       render 'edit'
