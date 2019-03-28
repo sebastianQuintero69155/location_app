@@ -39,16 +39,21 @@ $navbar-default-bg: rgb(4, 73, 41);
     color: rgb(24, 90, 5);
 }
 
-footer{
+.footer{
     margin-top: 25px;
     padding-top: 5px;
     border-top: 1px solid white;
-    color: #777777;
+    color: black;
 }
 
-footer a:hover{
-    color: #ffffff !important;
-    background-color: #ca4d4d;
+.footer a{
+    color: black !important;
+}
+
+.footer a:hover{
+    background-color: #ca4d4d !important;
+    color:white !important;
+   
     opacity: 0,5;
 }
 
